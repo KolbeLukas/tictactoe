@@ -87,7 +87,8 @@ function checkForWin() {
     if (fields.filter((value) => value).length == 9) {
         setTimeout(function () {
             document.getElementById('game-over').classList.remove('d-none');
-            document.getElementById('winner-is').innerHTML = `NO WINNER`
+            document.getElementById('winner-is').innerHTML = `NO WINNER`;
+            document.getElementById('winner-img').classList.add('d-none');
         }, 750);
     }
 
@@ -96,6 +97,7 @@ function checkForWin() {
         setTimeout(function () {
             document.getElementById('game-over').classList.remove('d-none');
             document.getElementById('winner-is').innerHTML = 'THE WINNER IS';
+            document.getElementById('winner-img').classList.remove('d-none');
             document.getElementById('winner-img').src = 'img/' + winner + '.png';
         }, 750);
     }
